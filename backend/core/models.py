@@ -39,12 +39,7 @@ class Product(db.Model):
     __tablename__ = "product"
 
     id = Column(Integer, primary_key=True)
-    pid = Column(
-        UUID(as_uuid=True),
-        unique=True,
-        nullable=False,
-        server_default=text("uuid_generate_v4()"),
-    )
+    pid = Column(UUID(as_uuid=True), unique=True, nullable=False, default=uuid.uuid4)
     name = Column(String(200), unique=True, nullable=False)
     slug = Column(String(255), unique=True, nullable=False)
     description = Column(Text, nullable=True)

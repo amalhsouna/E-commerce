@@ -26,6 +26,7 @@ class DevelopmentConfig(Config):
 
     APIFAIRY_TITLE = "E commerce project"
     APIFAIRY_UI = "swagger_ui"
+    APIFAIRY_VERSION = "1.0"
 
 
 class ProductionConfig(Config):
